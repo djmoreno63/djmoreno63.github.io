@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Vincula FontAwesome para los iconos -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- Vincula Bootstrap desde CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="../static/style.css">
+  </head>
+
+<style>
+    /*navbar */
+    
+
+    .container {
+        margin-top: 50px;
+    }
+
+    .content {
+        
+        background-color: rgba(255, 255, 255, 0.7); /* Casilla transparente */
+        border-radius: 8px;
+        
+        box-shadow: 0 4px 10px rgba(170, 8, 202, 0.144); /* Sombra suave */
+    }
+
+    /* Estilo para la imagen */
+    .img-rounded {
+            border-radius: 15px;
+            max-width: 100%; /* Imagen responsiva */
+            height: auto;
+    }
+
+    .text-content h3 {
+        color: #c300ff;
+    }
+
+    .content-box p {
+        color: #2c1133;
+        font-size: 1rem;
+    }
+    
+    .large-text {
+      font-size: 3rem;
+    }
+     /* Estilo para el cuadro */
+    .container-box2 {
+            background-color: black;
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 20px;
+        }
+    /* Estilo para las columnas */
+    .column {
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: black;
+    }
+
+        /* Estilo para el párrafo */
+
+    .container-box p {
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+    }
+        /* Color custom para el icono */
+    .text-custom {
+            color: #8e2de2; /* color personalizado */
+    }
+    .icon {
+            font-size: 40px;
+            margin: 10px;
+        }
+     /* Estilos generales para el footer */
+     .footer {
+            background-color: white;
+            color: black;
+            padding: 40px 0;
+            text-align: center;
+            margin-top: 50px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .footer h3 {
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        /* Estilos para los iconos de las redes sociales */
+        .social-icons {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .social-icons li {
+            display: inline-block;
+            margin: 0 15px;
+            opacity: 0; /* Inicialmente ocultos */
+            transform: translateY(20px); /* Desplazados hacia abajo */
+            animation: slideIn 0.6s forwards; /* Aplicamos la animación */
+        }
+        .main-container {
+            padding: 50px 0;
+        }
+
+        .main-text {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .main-text .content {
+            max-width: 60%;
+        }
+
+        .main-text .content h2 {
+            margin-bottom: 20px;
+        }
+
+        .main-text .content p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .main-text .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            max-height: 300px; /* Ajustamos el tamaño máximo de la imagen */
+        }
+
+        /* Estilos para los botones */
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .button-container .btn {
+            border-radius: 25px; /* Bordes redondeados */
+            font-size: 1rem;
+            padding: 10px 20px;
+            display: inline-flex;
+            align-items: center;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .button-container .btn:hover {
+            transform: translateY(-5px); /* Efecto hover */
+        }
+
+        .button-container .btn i {
+            margin-right: 10px; /* Espacio entre el icono y el texto */
+        }
+
+        /* Estilos de los enlaces de los iconos */
+        .social-icons a {
+            color:  black;
+            font-size: 40px;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        /* Efecto hover */
+        .social-icons a:hover {
+            transform: translateY(-5px); /* Movimiento de los iconos al pasar el cursor */
+            color: #007bff; /* Cambio de color */
+        }
+
+        /* Responsive: Ajuste de tamaño de los iconos en pantallas más pequeñas */
+        @media (max-width: 768px) {
+            .social-icons li {
+                margin: 0 10px;
+            }
+
+            .social-icons a {
+                font-size: 35px;
+            }
+        
+            .row {
+                flex-direction: column;
+            }
+            .main-text .content {
+                max-width: 100%;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+
+            .main-text .image-container {
+                margin-top: 10px;
+                margin-left: auto;  /* Margen automático a la izquierda */
+                margin-right: auto;  /* Margen automático a la derecha */
+                
+            }
+
+            .button-container .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+        /* Animación de los iconos */
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+</style>
+<body>
+    <!--
+    <main class="container my-5">
+    
+    <section class="my-5 p-5 bg-light rounded shadow-lg">
+        <h2 class="text-center text-success fw-bold animate__animated animate__zoomIn" style="font-family: 'Poppins', sans-serif;">What's up?</h2>
+        <p class="text-muted text-center animate__animated animate__fadeIn" style="font-size: 1.2rem;">
+          Cybersecurity never goes out of style, day by day I practice it and in my free time I create content on different social networks...
+        </p>
+    </section>  
+    </main>-->
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #20002c; ">
+        <div class="container-fluid text-center">
+        <a class="navbar-brand" href="/about"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-yin-yang" viewBox="0 0 16 16">
+            <path d="M9.167 4.5a1.167 1.167 0 1 1-2.334 0 1.167 1.167 0 0 1 2.334 0"/>
+            <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M1 8a7 7 0 0 1 7-7 3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 0 0 7 7 7 0 0 1-7-7m7 4.667a1.167 1.167 0 1 1 0-2.334 1.167 1.167 0 0 1 0 2.334"/>
+          </svg>    ARMONIA</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto"> <!--al margin podemos coloar 5 si queremos que se mueva solo 5 px a la izquierda-->
+                <li class="nav-item active">
+                    <a class="nav-link" href="/about">Sobre mi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/c">Contacto</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+    <div class="container main-container">
+        <!-- Sección principal con texto y imagen -->
+        <div class="main-text">
+            <div class="content">
+                <h2 class="large-text text-success fw-bold animate__animated animate__zoomIn" style="font-family: 'Poppins', sans-serif;">Heyyy!</h2>
+                <p class="animate__animated animate__fadeIn" style="font-size: 1.2rem; line-height: 1.6;">
+                    La ciberseguridad nunca pasa de moda, día a día la practico y en mi tiempo libre creo contenido en diferentes redes sociales, Conoceme...    
+                </p>
+            </div>
+            <div class="image-container">
+                <img src="../static/yo.jpg">
+            </div>
+        </div>
+
+        <!-- Botones debajo del párrafo -->
+        <div class="button-container">
+            <a href="/p" class="btn btn-primary">
+                <i class="fas fa-laptop-code"></i> Proyectos
+            </a>
+            <a href="https://www.instagram.com/armonia_tv/" class="btn btn-secondary">
+                <i class="fas fa-microphone"></i> Creador de contenido
+            </a>
+           <!-- <a href="#" class="btn btn-success">
+                <i class="fas fa-pencil-alt"></i> Writer
+            </a>-->
+        </div>
+    </div>
+
+
+  <div class="container">
+    <div class="container-box2">
+        <div class="row">
+            <!-- Columna 1 -->
+            <div class="col-md-4 column">
+                <i class="bi bi-braces icon text-custom"></i>
+                <h3>Desarrollador</h3>
+                <p>Diseño de sitios web, bases de datos y ciberseguridad, una gran combinación</p>
+            </div>
+            <!-- Columna 2 -->
+            <div class="col-md-4 column">
+                <i class="bi bi-person-check-fill icon text-custom"></i>
+                <h3>Habilidades</h3>
+                <p>Pensamiento creativo y analítico, gran curiosidad por aprender teniendo resiliencia, flexibilidad y agilidad</p>
+            </div>
+            <!-- Columna 3 -->
+            <div class="col-md-4 column">
+                <i class="bi bi-music-note-list icon text-custom"></i>
+                <h3>hobbie</h3>
+                <p>Buen dominio de python pero en mi tiempo libre me dedico a la producción musical y creación de contenido multimedia</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+ <!-- Carrusel de Iconos
+ <div id="carouselExample" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <a href="https://github.com/djmoreno63?tab=repositories">
+              <i class="fab fa-github"></i></a>
+            <p>GitHub</p>
+        </div>
+        <div class="carousel-item">
+            <i class="fab fa-twitch"></i>
+            <p>Twitch</p>
+        </div>
+        <div class="carousel-item">
+            <a href="https://www.instagram.com/armonia_tv/">
+            <i class="fab fa-instagram"></i></a>
+            <p>Instagram</p>
+        </div>
+        <div class="carousel-item">
+            <a href="https://www.linkedin.com/in/julian-moreno-700a78202/">
+            <i class="fab fa-linkedin"></i></a> 
+            <p>LinkedIn</p>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Siguiente</span>
+    </a>
+</div> -->
+
+    <!-- Contenido de la página -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <h3>Sígueme en mis redes sociales</h3>
+        
+        <ul class="social-icons">
+            <li style="animation-delay: 0.2s;"><a href="https://www.patreon.com/c/Arm0nia?fromConcierge=true" target="_blank" title="Patreon" aria-label="Patreon"><i class="fab fa-patreon"></i></a></li>
+            <li style="animation-delay: 0.4s;"><a href="https://x.com/Armonia_julian" target="_blank" title="Twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+            <li style="animation-delay: 0.6s;"><a href="https://www.instagram.com/armonia_tv/" target="_blank" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+            <li style="animation-delay: 0.8s;"><a href="https://www.linkedin.com/in/julian-moreno-700a78202/" target="_blank" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+            <li style="animation-delay: 1s;"><a href="https://github.com/djmoreno63?tab=repositories" target="_blank" title="GitHub" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+        </ul>
+        <div>
+            <p><br>&copy; 2025 Armonia</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</body>
+
+<!--Trae el contenido de layout.html-->
