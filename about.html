@@ -102,26 +102,25 @@
   </div>
   </div>
 
-  <footer class="footer">
-    <div class="social-icons">
-        <a href="index.html" target="_self" class="social-icon">
-        ↸Inicio
-        </a>
-        <a href="https://www.instagram.com/armonia_tv/" target="_blank" class="social-icon">
-            <i class="fab fa-instagram"></i> Instagram
-        </a>
-        <a href="https://www.linkedin.com/in/julian-moreno-700a78202/" target="_blank" class="social-icon">
-            <i class="fab fa-linkedin"></i> LinkedIn
-        </a>
-        <a href="https://x.com/Armonia_julian" target="_blank" class="social-icon">
-            <i class="fab fa-twitter"></i> Twitter
-        </a>
-    </div>
-</footer>
+  <!-- Footer -->
+    <footer class="footer">
+        <h3>Sígueme en mis redes sociales</h3>
+        
+        <ul class="social-icons">
+            <li style="animation-delay: 0.2s;"><a href="https://www.patreon.com/c/Arm0nia?fromConcierge=true" target="_blank" title="Patreon" aria-label="Patreon"><i class="fab fa-patreon"></i></a></li>
+            <li style="animation-delay: 0.4s;"><a href="https://x.com/Armonia_julian" target="_blank" title="Twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+            <li style="animation-delay: 0.6s;"><a href="https://www.instagram.com/armonia_tv/" target="_blank" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+            <li style="animation-delay: 0.8s;"><a href="https://www.linkedin.com/in/julian-moreno-700a78202/" target="_blank" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+            <li style="animation-delay: 1s;"><a href="https://github.com/djmoreno63?tab=repositories" target="_blank" title="GitHub" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+        </ul>
+        <div>
+            <p><br>&copy; 2025 Armonia</p>
+        </div>
+    </footer>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 
@@ -197,22 +196,31 @@
             min-height: 80vh; /* Deja espacio para el pie de página */
         }
 
-        /* Asegura que los íconos estén en una sola línea */
+        /* Estilos para los iconos de las redes sociales */
         .social-icons {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
         }
 
-        .social-icons a {
+        .social-icons li {
+            display: inline-block;
             margin: 0 15px;
-            font-size: 1.2rem;
-            color: #ad5389;
-            transition: color 0.3s ease;
+            opacity: 0; /* Inicialmente ocultos */
+            transform: translateY(20px); /* Desplazados hacia abajo */
+            animation: slideIn 0.6s forwards; /* Aplicamos la animación */
+        }
+    /* Estilos de los enlaces de los iconos */
+        .social-icons a {
+            color:  black;
+            font-size: 40px;
+            transition: transform 0.3s, color 0.3s;
         }
 
+        /* Efecto hover */
         .social-icons a:hover {
-            color: #007bff; /* Cambia el color al pasar el mouse */
+            transform: translateY(-5px); /* Movimiento de los iconos al pasar el cursor */
+            color: #007bff; /* Cambio de color */
         }
 
         
@@ -238,6 +246,13 @@
     /* Asegura que los íconos estén alineados en una sola fila */
     .social-icons {
             transform: translate(0 , 150%); /* Centrado exacto */  
+    .social-icons li {
+                margin: 0 10px;
+            }
+
+    .social-icons a {
+                font-size: 35px;
+            }
     }
   }
 </style>
